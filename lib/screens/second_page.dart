@@ -17,7 +17,7 @@ class _SecondPageState extends State<SecondPage> {
       body: Center(
           child: ElevatedButton(
               onPressed: () {
-                Navigator.of(context).popAndPushNamed('/third');
+                Navigator.of(context).popAndPushNamed('/third', arguments: 'it is third!');
               },
               child: const Text('돌아가기'))),
       // floatingActionButton: FloatingActionButton(onPressed: () {

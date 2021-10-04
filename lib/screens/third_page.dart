@@ -11,11 +11,13 @@ class ThirdPage extends StatefulWidget {
 class _ThirdPageState extends State<ThirdPage> {
   @override
   Widget build(BuildContext context) {
+    final String args = ModalRoute.of(context)!.settings.arguments.toString();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Third'),
       ),
-      body: const Center(child: Text('세번째')),
+      body: Center(child: Text(args, style: const TextStyle(fontSize: 30,))),
       floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.backspace),
           onPressed: () {
